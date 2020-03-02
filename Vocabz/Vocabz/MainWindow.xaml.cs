@@ -23,6 +23,7 @@ namespace Vocabz
         public MainWindow()
         {
             InitializeComponent();
+            //Moppelkotze
         }
     }
 }
