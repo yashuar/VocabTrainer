@@ -9,7 +9,7 @@ namespace Vocabz
 	public class XMLSerializer
 	{
 		private static Random rnd = new Random();
-		public static List<Vokabel> ReadFromFile()
+		public static IEnumerable<Vokabel> ReadFromFile()
 		{
 			List<Vokabel> myList = new List<Vokabel>();
 			var serializer = new XmlSerializer(typeof(List<Vokabel>));
