@@ -7,9 +7,6 @@
         mc:Ignorable="d"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
-        TextElement.FontWeight="Medium"
-        TextElement.FontSize="16"
-        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -22,14 +19,14 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Label Content="Wähle die richtige Übersetzung:" Margin="0" FontSize="16" Width="276" Foreground="White" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Label Content="Platzhalter" Margin="100,55" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" Foreground="Black" Grid.ColumnSpan="2">
+        <Label Name="lblGer" Content="Platzhalter" Margin="100,55" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" Foreground="Black" Grid.ColumnSpan="2">
             <Label.Background>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.AppWorkspaceColorKey}}"/>
             </Label.Background>
         </Label>
-        <Button Grid.Row="1" Grid.Column="0" Content="Platzhalter" Width="Auto" FontWeight="Bold" HorizontalContentAlignment="Center" FontSize="24" Foreground="Black" Margin="12"/>
-        <Button Grid.Row="1" Grid.Column="1" Content="Platzhalter" Width="Auto" FontWeight="Bold" HorizontalContentAlignment="Center" FontSize="24" Foreground="Black" Margin="12"/>
-        <Button Grid.Row="2" Grid.Column="0" Content="Platzhalter" Width="Auto" FontWeight="Bold" HorizontalContentAlignment="Center" FontSize="24" Foreground="Black" Margin="12"/>
-        <Button Grid.Row="2" Grid.Column="1" Content="Platzhalter" Width="Auto" FontWeight="Bold" HorizontalContentAlignment="Center" FontSize="24" Foreground="Black" Margin="12"/>
+        <Button Name="bttnOne" Grid.Row="1" Grid.Column="0" Content="Platzhalter" Width="Auto" FontWeight="Bold" HorizontalContentAlignment="Center" FontSize="24" Foreground="Black" Margin="12" Click="BttnOne_Click"/>
+        <Button Name="bttnTwo" Grid.Row="1" Grid.Column="1" Content="Platzhalter" Width="Auto" FontWeight="Bold" HorizontalContentAlignment="Center" FontSize="24" Foreground="Black" Margin="12" Click="BttnTwo_Click"/>
+        <Button Name="bttnThree" Grid.Row="2" Grid.Column="0" Content="Platzhalter" Width="Auto" FontWeight="Bold" HorizontalContentAlignment="Center" FontSize="24" Foreground="Black" Margin="12" Click="BttnThree_Click"/>
+        <Button Name="bttnFour" Grid.Row="2" Grid.Column="1" Content="Platzhalter" Width="Auto" FontWeight="Bold" HorizontalContentAlignment="Center" FontSize="24" Foreground="Black" Margin="12" Click="BttnFour_Click"/>
     </Grid>
 </Window>

@@ -23,7 +23,55 @@ namespace Vocabz
         public MainWindow()
         {
             InitializeComponent();
-            //Moppelkotze
+
+            Binding bindingGer = new Binding();
+            lblGer.SetBinding(Label.ContentProperty, bindingGer);
+
+            Binding bindingBttn1 = new Binding();
+            bttnOne.SetBinding(Button.ContentProperty, bindingBttn1);
+
+            Binding bindingBttn2 = new Binding();
+            bttnTwo.SetBinding(Button.ContentProperty, bindingBttn2);
+
+            Binding bindingBttn3 = new Binding();
+            bttnThree.SetBinding(Button.ContentProperty, bindingBttn3);
+
+            Binding bindingBttn4 = new Binding();
+            bttnFour.SetBinding(Button.ContentProperty, bindingBttn4);
+
+
+        }
+
+        private void BttnOne_Click(object sender, RoutedEventArgs e)
+        {
+            //if (bttnOne.Content.ToString() == )
+            //{
+
+            //}
+        }
+
+        private void BttnTwo_Click(object sender, RoutedEventArgs e)
+        {
+            //if (bttnTow.Content.ToString() == )
+            //{
+
+            //}
+        }
+
+        private void BttnThree_Click(object sender, RoutedEventArgs e)
+        {
+            //if (bttnThree.Content.ToString() == )
+            //{
+
+            //}
+        }
+
+        private void BttnFour_Click(object sender, RoutedEventArgs e)
+        {
+            //if (bttnFourContent.ToString() == )
+            //{
+
+            //}
         }
     }
 }
