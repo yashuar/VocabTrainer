@@ -1,8 +1,10 @@
 ﻿using System;
 
-public class Vokabel
+namespace Vocabz
 {
-	public String Englisch { get; set; }
-	public String Deutsch { get; set; }
-	public String[] Falsch { get; set; }
+	public class Vokabel
+	{
+		public String Fremdsprache { get; set; }
+		public String Deutsch { get; set; }
+	}
 }
