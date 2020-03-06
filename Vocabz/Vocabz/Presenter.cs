@@ -8,20 +8,29 @@ namespace Vocabz
 {
     class Presenter
     {
+        public string Vokabel;
+        public string Uebersetzung;
+        public string Falsch1;
+        public string Falsch2;
+        public string Falsch3;
+        
 
         public static string GetVokabel()
         {
             //WIP
+            return null;
         }
 
         public static string GetUebersetzung()
         {
             //WIP
+            return null;
         }
 
         public static List<string> GetFehler()
         {
             //WIP
+            return null;
         }
 
         public static List<Vokabel> RandomizeList<T>()
