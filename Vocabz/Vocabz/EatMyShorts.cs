@@ -8,12 +8,12 @@ namespace Vocabz
 {
     class EatMyShorts
     {
-        public void EatMyShorts()
-        {
-            for (int i = 0; i < shorts.length; i++)
-            {
-                Eat();
-            }
-        }
+        //public void EatMyShorts()
+        //{
+        //    for (int i = 0; i < shorts.length; i++)
+        //    {
+        //        Eat();
+        //    }
+        //}
     }
 }
