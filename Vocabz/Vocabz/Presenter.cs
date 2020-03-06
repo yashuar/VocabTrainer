@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,52 +9,55 @@ namespace Vocabz
 {
     class Presenter
     {
-        public string Vokabel;
-        public string Uebersetzung;
-        public string Falsch1;
-        public string Falsch2;
-        public string Falsch3;
-        
+        public static String Deutsch { get; set; }
+        public static String Uebersetzung { get; set; }
+        public static String Falsch1 { get; set; }
+        public static String Falsch2 { get; set; }
+        public static String Falsch3 { get; set; }
 
-        public static string GetVokabel()
+
+        public static IEnumerable<Vokabel> ReturnVokabel()
         {
-            //WIP
-            return null;
+            IEnumerable<Vokabel> randomizedList = RandomizeList();
+
+            foreach (Vokabel vokabel in randomizedList)
+            {
+                yield return vokabel;
+            }
         }
 
-        public static string GetUebersetzung()
+        public static void ChangeFields()
         {
-            //WIP
-            return null;
+            Vokabel vokabel = (Vokabel) ReturnVokabel();
+            Deutsch = vokabel.Deutsch;
+            Uebersetzung = vokabel.Fremdsprache;
+            Falsch1 = vokabel.Falsch[1];
+            Falsch2 = vokabel.Falsch[2];
+            Falsch3 = vokabel.Falsch[3];
         }
 
-        public static List<string> GetFehler()
+        public static IEnumerable<Vokabel> RandomizeList()
         {
-            //WIP
-            return null;
-        }
-
-        public static List<Vokabel> RandomizeList<T>()
-        {
-            List<Vokabel> originalList = XMLSerializer.ReadFromFile();
-            List<Vokabel> randomizedList = Shuffle(originalList);
+            IEnumerable<Vokabel> originalList = XMLSerializer.ReadFromFile();
+            IEnumerable<Vokabel> randomizedList = Shuffle(originalList);
             return randomizedList;
         }
 
         private static Random rng = new Random();
 
-        public static List<T> Shuffle<T>(List<T> list)
+        public static IEnumerable<Vokabel> Shuffle<Vokabel>(IEnumerable<Vokabel> list)
         {
-            int n = list.Count;
+            List<Vokabel> tmpList = (List<Vokabel>)list;
+            int n = list.Count();
             while (n > 1)
             {
                 n--;
                 int k = rng.Next(n + 1);
-                T value = list[k];
-                list[k] = list[n];
-                list[n] = value;
+                Vokabel value = tmpList[k];
+                tmpList[k] = tmpList[n];
+                tmpList[n] = value;
             }
-            return list;
+            return (IEnumerable<Vokabel>)tmpList;
         }
 
     }
