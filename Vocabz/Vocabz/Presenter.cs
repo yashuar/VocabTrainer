@@ -8,13 +8,23 @@ namespace Vocabz
 {
     class Presenter
     {
-        //test List
 
+        public static string GetVokabel()
+        {
+            //WIP
+        }
 
+        public static string GetUebersetzung()
+        {
+            //WIP
+        }
 
-        //Work in Progress
+        public static List<string> GetFehler()
+        {
+            //WIP
+        }
 
-        public List<Vokabel> RandomizeList<T>()
+        public static List<Vokabel> RandomizeList<T>()
         {
             List<Vokabel> originalList = XMLSerializer.ReadFromFile();
             List<Vokabel> randomizedList = Shuffle(originalList);
