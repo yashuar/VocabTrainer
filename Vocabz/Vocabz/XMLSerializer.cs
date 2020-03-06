@@ -8,6 +8,7 @@ namespace Vocabz
 {
 	public class XMLSerializer
 	{
+		private static Random rnd = new Random();
 		public static List<Vokabel> ReadFromFile()
 		{
 			List<Vokabel> myList = new List<Vokabel>();
@@ -18,6 +19,17 @@ namespace Vocabz
 			textReader.Close();
 			fileStream.Close();
 			fileStream.Dispose();
+			return AddWrong(Vokabelliste);
+		}
+
+		private static List<Vokabel> AddWrong(List<Vokabel> Vokabelliste)
+		{
+			foreach (Vokabel vokabel in Vokabelliste)
+			{
+				vokabel.Falsch[0] = Vokabelliste[rnd.Next(Vokabelliste.Count)].Fremdsprache;
+				vokabel.Falsch[1] = Vokabelliste[rnd.Next(Vokabelliste.Count)].Fremdsprache;
+				vokabel.Falsch[2] = Vokabelliste[rnd.Next(Vokabelliste.Count)].Fremdsprache;
+			}
 			return Vokabelliste;
 		}
 	}
