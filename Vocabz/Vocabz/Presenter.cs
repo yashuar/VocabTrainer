@@ -8,18 +8,17 @@ namespace Vocabz
 {
     class Presenter
     {
+        //test List
 
-        public List<T> RandomizeList<T>()
+
+
+        //Work in Progress
+
+        public List<Vokabel> RandomizeList<T>()
         {
-            List<T> originalList = GetVokabelList();
-            List<T> randomizedList = Shuffle(originalList);
+            List<Vokabel> originalList = XMLSerializer.ReadFromFile();
+            List<Vokabel> randomizedList = Shuffle(originalList);
             return randomizedList;
-        }
-
-        public List<T> GetVokabelList<T>()
-        {
-            List<T> vocabList = XMLSerializer.getList();
-            return vocabList;
         }
 
         private static Random rng = new Random();
