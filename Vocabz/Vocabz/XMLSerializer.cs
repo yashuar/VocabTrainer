@@ -8,7 +8,7 @@ namespace Vocabz
 {
 	public class XMLSerializer
 	{
-		private List<Vokabel> ReadFromFile()
+		public static List<Vokabel> ReadFromFile()
 		{
 			List<Vokabel> myList = new List<Vokabel>();
 			var serializer = new XmlSerializer(typeof(List<Vokabel>));
